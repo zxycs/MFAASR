@@ -22,7 +22,6 @@ The testset can be downloaded from [[BaiduYun]](https://pan.baidu.com/s/18NsZHMb
    ```shell
    python test.py -opt options/test/test_x4_BI.json
    
-
 ## Train
 
 1. Download training set DIV2K [[Official Link]](https://data.vision.ee.ethz.ch/cvl/DIV2K/) or DF2K [[GoogleDrive]](https://drive.google.com/drive/folders/1B-uaxvV9qeuQ-t7MFiN1oEdA6dKnj2vW?usp=sharing) [[BaiduYun]](https://pan.baidu.com/s/1CFIML6KfQVYGZSNFrhMXmA#list/path=%2F) (provided by [BasicSR](https://github.com/xinntao/BasicSR)).
@@ -35,11 +34,10 @@ The testset can be downloaded from [[BaiduYun]](https://pan.baidu.com/s/18NsZHMb
    ```shell
    python train.py -opt options/train/train_example.json
    ```
-
 5. You can monitor the training process in `./experiments`.
 
 6. Finally, you can follow the **test pipeline** to evaluate your model.
 
-4. ## Acknowledgements
+## Acknowledgements
 
 - Thank [Paper99](https://github.com/Paper99/SRFBN_CVPR19), Our code structure is derived from his repository 
