@@ -1,0 +1,63 @@
+{
+    "mode": "sr",
+    "use_cl": true,
+    "gpu_ids": [0],
+
+    "scale": 2,
+    "is_train": true,
+    "use_chop": true,
+    "rgb_range": 255,
+    "self_ensemble": false,
+    "save_image": false,
+
+    "datasets": {
+        "train": {
+            "mode": "LRHR",
+            "dataroot_HR": "./data/paper99/DIV2K/Augment/DIV2K_train_HR_aug/x2",
+            "dataroot_LR": "./data/paper99/DIV2K/Augment/DIV2K_train_LR_aug/x2",
+            //"data_type": "npy",
+            "data_type": "img",
+            "n_workers": 16,
+            "batch_size": 16,
+            "LR_size": 60,//本来应该是40
+            "use_flip": true,
+            "use_rot": true,
+            "noise": "."
+        },
+        "val": {
+            "mode": "LRHR",
+            "dataroot_HR": "./results/HR/Set5/x2",
+            "dataroot_LR": "./results/LR/LRBI/Set5/x2",
+            "data_type": "img"
+        }
+    },
+
+    "networks": {
+        "which_model": "MVPNET",
+        "num_features": 32,
+        "in_channels": 3,
+        "out_channels": 3,
+        "num_steps": 4,//////要改的地方
+        "num_groups": 3
+    },
+
+    "solver": {
+        "type": "SGD",
+        "learning_rate": 0.0000001,
+        "weight_decay": 0,
+        "lr_scheme": "MultiStepLR",
+        "lr_steps": [200, 400, 600, 800],
+        "lr_gamma": 0.5,
+        "loss_type": "l1",
+        "manual_seed": 0,
+        "num_epochs": 1000,//////要改的地方
+        "skip_threshold": 3,
+        "split_batch": 1,
+        "save_ckp_step": 1,
+        "save_vis_step": 1,
+        "pretrain": null,//"resume",
+        "pretrained_path": "./experiments/MVPNET_in3f32_x2/epochs/last_ckp.pth",
+        //"cl_weights": [1.0, 1.0, 1.0, 1.0]
+        "cl_weights": [0.1,0.3, 0.5, 1.0]
+    }
+}
