@@ -40,4 +40,5 @@ The testset can be downloaded from [[BaiduYun]](https://pan.baidu.com/s/18NsZHMb
 
 ## Acknowledgements
 
-- Thank [Paper99](https://github.com/Paper99/SRFBN_CVPR19), Our code structure is derived from his repository 
+- Thank [Paper99](https://github.com/Paper99/SRFBN_CVPR19), Our code structure is derived from his repository
+- Thank authors of [BasicSR](https://github.com/xinntao/BasicSR)/[RDN](https://github.com/yulunzhang/RDN)/[EDSR](https://github.com/thstkdgus35/EDSR-PyTorch). They provide many useful codes which facilitate our work.
