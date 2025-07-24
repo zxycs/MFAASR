@@ -20,11 +20,8 @@ The testset can be downloaded from [[BaiduYun]](https://pan.baidu.com/s/18NsZHMb
 2. cd to `EMASRN` and run **one of following commands** for evaluation:
 
    ```shell
-   # EMASRN
-   python test.py -opt options/test/test_example_x3.json
-   python test.py -opt options/test/test_example_x4.json
+   python test.py -opt options/test/test_x4_BI.json
    
-3. Edit `./options/test/test_example_x3.json` or `./options/test/test_example_x4.json` for your needs
 
 ## Train
 
@@ -34,17 +31,14 @@ The testset can be downloaded from [[BaiduYun]](https://pan.baidu.com/s/18NsZHMb
 
 3. Run `./results/Prepare_TestData_HR_LR.m` in Matlab to generate HR/LR test images with corresponding degradation model and scale factor, and choose one of SR benchmark for evaluation during training.
 
-4. Edit `./options/train/train_SRFBN_example.json` for your needs according to [`./options/train/README.md`.](./options/train/README.md)
-
-5. Then, run command:
+4. Then, run command:
    ```shell
-   cd SRFBN_CVPR19
    python train.py -opt options/train/train_SRFBN_example.json
    ```
 
-6. You can monitor the training process in `./experiments`.
+5. You can monitor the training process in `./experiments`.
 
-7. Finally, you can follow the **test pipeline** to evaluate your model.
+6. Finally, you can follow the **test pipeline** to evaluate your model.
 
 4. ## Acknowledgements
 
