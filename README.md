@@ -33,7 +33,7 @@ The testset can be downloaded from [[BaiduYun]](https://pan.baidu.com/s/18NsZHMb
 
 4. Then, run command:
    ```shell
-   python train.py -opt options/train/train_SRFBN_example.json
+   python train.py -opt options/train/train_example.json
    ```
 
 5. You can monitor the training process in `./experiments`.
